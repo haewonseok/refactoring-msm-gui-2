@@ -13,9 +13,9 @@
 class Actor < ApplicationRecord
   validates(:name, presence: true)
 
-  belongs_to(:filmography)
   has_many(:characters, :class_name => "Character", :foreign_key => "Actor_id")
- 
+  has_many(:filmography, :class_name => "Movie", :foreign_key => "Actor_id")
+
   # def characters
   #   key = self.id
 
