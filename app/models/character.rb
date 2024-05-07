@@ -13,7 +13,7 @@ class Character < ApplicationRecord
   # belongs_to(:movie, :class_name: "Movie", :foreign_key: "movie_id")
  
   belongs_to(:movie)
-  has_many(:actors, :class_name => "Character", :foreign_key => "Character_id")
+  has_many(:actors, :class_name => "Character", :foreign_key => "character_id")
  
   #  def movie
   #  key = self.movie_id
